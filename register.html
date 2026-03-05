@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- <form id="registerForm">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first_name" required />
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last_name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirm-password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm_password"
+        required
+      />
+
+      <button type="submit">Submit</button>
+    </form> -->
+
+    <main class="container py-5">
+      <form
+        id="registerForm"
+        class="mx-auto needs-validation card p-4 shadow-sm"
+        style="max-width: 600px"
+        novalidate
+        method="POST"
+      >
+        <h3 class="mb-4 text-center">Register</h3>
+
+        <!-- First + Last Name Row -->
+        <div class="row">
+          <div class="col-12 col-md-6 mb-3">
+            <label for="first-name" class="form-label">First Name</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first_name"
+              class="form-control"
+              pattern="^[A-Za-z]+$"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a valid first name (letters only).
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 mb-3">
+            <label for="last-name" class="form-label">Last Name</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last_name"
+              class="form-control"
+              pattern="^[A-Za-z]+$"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a valid last name (letters only).
+            </div>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">
+            Please enter a valid email address.
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            minlength="8"
+            required
+          />
+          <div class="invalid-feedback">
+            Password must be at least 8 characters.
+          </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-4">
+          <label for="confirm-password" class="form-label">
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm_password"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Passwords must match.</div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-primary w-100">
+          Create Account
+        </button>
+      </form>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
