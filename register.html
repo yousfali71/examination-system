@@ -12,30 +12,6 @@
     />
   </head>
   <body>
-    <!-- <form id="registerForm">
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" name="first_name" required />
-
-      <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" name="last_name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required />
-
-      <label for="confirm-password">Confirm Password</label>
-      <input
-        type="password"
-        id="confirm-password"
-        name="confirm_password"
-        required
-      />
-
-      <button type="submit">Submit</button>
-    </form> -->
-
     <main class="container py-5">
       <form
         id="registerForm"
@@ -55,11 +31,10 @@
               id="first-name"
               name="first_name"
               class="form-control"
-              pattern="^[A-Za-z]+$"
               required
             />
-            <div class="invalid-feedback">
-              Please enter a valid first name (letters only).
+            <div class="invalid-feedback" id="first-name-error">
+              Enter a valid first name (letters only).
             </div>
           </div>
 
@@ -70,11 +45,10 @@
               id="last-name"
               name="last_name"
               class="form-control"
-              pattern="^[A-Za-z]+$"
               required
             />
-            <div class="invalid-feedback">
-              Please enter a valid last name (letters only).
+            <div class="invalid-feedback" id="last-name-error">
+              Enter a valid last name (letters only).
             </div>
           </div>
         </div>
@@ -88,9 +62,10 @@
             name="email"
             class="form-control"
             required
+            placeholder="name@example.com"
           />
-          <div class="invalid-feedback">
-            Please enter a valid email address.
+          <div class="invalid-feedback" id="email-error">
+            Enter a valid email address (name@example.com).
           </div>
         </div>
 
@@ -105,7 +80,7 @@
             minlength="8"
             required
           />
-          <div class="invalid-feedback">
+          <div class="invalid-feedback" id="password-error">
             Password must be at least 8 characters.
           </div>
         </div>
@@ -122,7 +97,10 @@
             class="form-control"
             required
           />
-          <div class="invalid-feedback">Passwords must match.</div>
+
+          <div class="invalid-feedback" id="confirm-match-error">
+            Passwords must match.
+          </div>
         </div>
 
         <!-- Submit -->
@@ -137,5 +115,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="register.js"></script>
   </body>
 </html>
