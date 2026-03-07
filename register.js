@@ -1,8 +1,3 @@
-// check if user exists
-if (localStorage.getItem("user")) {
-  window.location.replace("login.html");
-}
-
 // form validation
 const form = document.getElementById("registerForm");
 
